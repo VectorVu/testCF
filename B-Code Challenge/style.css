@@ -1,0 +1,25 @@
+*{
+    box-sizing: border-box;
+}
+.container{
+    width: 500px;
+    height: 500px;
+    margin: 100px auto;
+    background-color: antiquewhite;
+    border-radius: 15px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.inputContain{
+    width: 90%;
+    margin: 50px auto;
+}
+.inputContain > input{
+    width: 60%;
+    height: 30px;
+}
+.result{
+    display: flex;
+    /* flex-direction: column; */
+}

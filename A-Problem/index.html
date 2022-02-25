@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A-Problem Solving</title>
+</head>
+<body>
+    <script>
+        // A - 1 Nhập vào một mảng các số nguyên, tìm cặp hai số liền kề có tích lớn nhất và trả về kết quả của phép nhân 2 số đó.
+        function adjacentElementsProduct(inputArray) {
+            let max = 0;
+            for (let i =0; i<inputArray.length-1;i++){
+                if(typeof(inputArray[i])!=="number") return console.log("Array invalid");
+                if(inputArray[i]*inputArray[i+1] > max) max=inputArray[i]*inputArray[i+1];
+            }
+            console.log(max.toString());
+        }
+        let inputArray1=[2, 3, -5, -2, 4];
+        console.log("A-1:");
+        adjacentElementsProduct(inputArray1)
+        // A - 2 
+        function alternatingSums(a) {
+            let resultArray=[0,0];
+            for(let i =0; i<a.length;i++){
+                if(typeof(a[i])!=="number") return console.log("Array invalid");
+                if (i%2===0){
+                    resultArray[0] += a[i]; 
+        
+                }
+                else if(i%2!==0){
+                    resultArray[1] += a[i]; 
+                }
+            }
+            console.log(resultArray.toString());    
+        }
+        console.log("A-2:");
+        let inputArray2 = [60, 40, 55, 75, 64];
+        alternatingSums(inputArray2);
+
+    </script>
+</body>
+</html>
